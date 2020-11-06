@@ -14,7 +14,7 @@ if (imgsrc.length > 22){
     // If the stylesheet is used instead, an empty image element is placed
     // in the window.
     img.setAttribute("Style", 
-    "display:block; margin-left:auto; margin-right:auto;")
+    "display:block; margin-left:auto; margin-right:auto;");
     img.height = usableheight;
     // Only worthwhile creating the filter buttons 
     // if an image is successfully displayed.
