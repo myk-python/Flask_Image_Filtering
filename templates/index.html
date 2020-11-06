@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- First page contains an upload button composed of a label and form (not displayed). -->
+<div class="input_div">
+    <label for="file_input" class="upload_label">UPLOAD IMAGE</label>
+
+    <form action="/"  method="POST" enctype="multipart/form-data">
+        <!-- Form set to auto-submit as soon as input loaded. -->
+        <input name="image" id ="file_input" type="file" oninput="this.form.submit();">
+    </form>
+</div>
+<!-- Image element starts out blank.  -->
+<img id="filteredimg" src={{IMGSRC}}>
+<div id="filter_div" class="filter_div"></div>
+
+<script src="/static/filterbtncreation.js">   
+</script>
+{% endblock %}

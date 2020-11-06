@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+<p>This is the filtered page</p>
+<img id="filteredimg" src={{IMGSRC}}>
+<script>
+    function displayimg(){
+        if (document.getElementById("filteredimg") != "Null" && document.getElementById("filteredimg") != ""){
+            var img =document.getElementById("filteredimg");
+            var usableheight = window.outerHeight*0.6;
+            img.height = usableheight;
+        }
+        
+    }
+    displayimg()
+
+</script>
+{% endblock %}

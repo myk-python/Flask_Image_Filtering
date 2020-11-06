@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- This page is identical to the index page. -->
+<!-- This prevents a failed img upload placeholder being inserted 
+into the page. -->
+
+<div class="input_div">
+    <label for="file_input" class="upload_label">UPLOAD IMAGE</label>
+
+    <form action="/"  method="POST" enctype="multipart/form-data">
+        <input name="image" id ="file_input" type="file" oninput="this.form.submit();">
+    </form>
+</div>
+
+
+<div id="filteredimg_div" class="filteredimg_div">
+    <img id="filteredimg" src={{IMGSRC}}>
+</div>
+<div id="filter_div" class="filter_div"></div>
+
+
+<script src="/static/filterbtncreation.js">
+
+</script>
+{% endblock %}
