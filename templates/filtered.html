@@ -3,11 +3,16 @@
 <!-- This page is identical to the index page. -->
 <!-- This prevents a failed img upload placeholder being inserted 
 into the page. -->
-
+<div class="logout_div">
+    <h1 class="left_logout">Imagining Alchemist Filtering</h1>
+    <form name="logout_form" method="GET" action="/">
+        <input class="logout_btn" type="submit" value="Logout">
+    </form>
+</div>
 <div class="input_div">
     <label for="file_input" class="upload_label">UPLOAD IMAGE</label>
 
-    <form action="/"  method="POST" enctype="multipart/form-data">
+    <form action="/index"  method="POST" enctype="multipart/form-data">
         <input name="image" id ="file_input" type="file" oninput="this.form.submit();">
     </form>
 </div>
@@ -16,7 +21,7 @@ into the page. -->
 <div id="filteredimg_div" class="filteredimg_div">
     <img id="filteredimg" src={{IMGSRC}}>
 </div>
-<div id="filter_div" class="filter_div"></div>
+<div id="filter_div" class="parent_inline_form"></div>
 
 
 <script src="/static/filterbtncreation.js">
