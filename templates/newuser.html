@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block body %}
+<script>
+    // Submit button will be enabled if passwords match.
+    function match(){
+        var p1 =document.querySelector("#pw1").value;
+        var p2 =document.querySelector("#pw2").value;
+        if(p1 === p2){
+            document.querySelector("#submitbtn").disabled=false;
+        }
+        else{
+            document.querySelector("#pwordmismatch").innerHTML='PASSWORDS MUST MATCH';
+            setTimeout(function(){document.querySelector("#pwordmismatch").innerHTML='';}, 1500);
+        }
+    }
+</script>
+
+<div name="loginbox" class="login_box">
+    <form method="POST" action="/newuser">
+        <div class="login_logo">
+            <img src="/static/icon.png" alt="IA Logo" width =100%>
+        </div>
+        <div>
+            <input type="text" name="uname" class="user_input" placeholder="Email">
+        </div>
+        <div>
+            <input type="password" name="pword1" id="pw1" class="user_input" placeholder="Password">
+            <input type="password" name="pword2" id="pw2" class="user_input" placeholder="Repeat password" onchange="match()">
+        </div>
+        <div class="mismatchdiv">
+            <label id="pwordmismatch" class="mismatch"></label>
+        </div>
+        <div>
+            <input type="submit" id="submitbtn" class="user_submit" value="Create">
+        </div>
+    </form>
+</div>
+<script>
+    // Submit button disabled by default.
+    document.querySelector("#submitbtn").disabled=true;
+</script>
+{% endblock %}
