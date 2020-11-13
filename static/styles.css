@@ -3,10 +3,6 @@
 body{
     background-color: #262930;
 }
-h1{
-    color: #c4c4c4;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 .input_div{
     min-width:100%;
@@ -26,23 +22,100 @@ h1{
     margin-right: auto;
     width: 10em;
 }
-    
+
+.hlinks{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-decoration: none;
+    color: #c4c4c4;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    padding-top: 2px;
+    margin-bottom: auto;
+    text-align: center;
+}
 
 input[type="file"]{
     display: none;
 }
 
-.filter_div {
+.login_box{
+    background-color:#52535aa1;
+    display: block;
+    width: 60vh;  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    border-width: 0px;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+.login_logo{
+    border-width: 0px;
+    border-radius: 2px;
+}
+.user_input{
+    width:10em;
+    display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #393a3b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    background-color: #c4c4c4;
+    width:95%;
+    margin-top: 5px;
+    border-width: 0px;
+    border-radius: 2px; 
+}
+.mismatchdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 100%;
+}
+.mismatch{
+    
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    border-width: 0px;
+    border-radius: 2px;
+}
+.user_submit{
+    display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #c4c4c4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    background-color: #393a3b;
+    width:95%;
+    margin-top: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-width: 0px;
+    border-radius: 2px;
+}
+
+
+.parent_inline_form {
     white-space: nowrap; 
     overflow-x: auto;
     text-align: center;
 }
 
-.filter_btn_form{
+.child_inline_form{
     display: inline-block;
     
 }
-input[type=submit]{
+.filter_btn{
     color: #c4c4c4;
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
@@ -51,7 +124,30 @@ input[type=submit]{
     margin-top: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    width:10em;
+    width: 10em;
     border-width: 0px;
     border-radius: 2px;
+}
+.logout_div{
+    display: flex;
+}
+.logout_div .left_logout{
+    color: #c4c4c4;
+    font-family: Arial, Helvetica, sans-serif;
+    flex: 1;
+}
+
+.logout_div .logout_btn{
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #c4c4c4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    background-color: #393a3b;
+    margin-bottom: 5px;
+    border-width: 0px;
+    border-radius: 2px;
+    flex: 1;
+  
 }
