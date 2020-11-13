@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+<div name="loginbox" class="login_box">
+    <form method="POST" action="/">
+        <div class="login_logo">
+            <img src="/static/icon.png" alt="IA Logo" width =100%>
+        </div>
+        <div>
+            <input type="text" name="uname" class="user_input" placeholder="Email">
+        </div>
+        <div>
+            <input type="password" name="pword" class="user_input" placeholder="Password">
+        </div>
+        <div class="mismatchdiv">
+            <!-- Provides a login error if username AND/OR password is incorrect -->
+            <label id="pwordmismatch" class="mismatch">{{ERROR}}</label>
+        </div>
+        <div>
+            <input type="submit" class="user_submit" value="Login">
+        </div>
+    </form>
+    <script>
+        // Clears error automatically.
+        setTimeout(function(){document.querySelector("#pwordmismatch").innerHTML='';}, 1500)
+    </script>
+    <div class="mismatchdiv">
+        <a href="/createuser" class="hlinks">Create account</a>
+    </div>
+</div>
+{% endblock %}
